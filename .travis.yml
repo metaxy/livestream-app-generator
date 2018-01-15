@@ -9,10 +9,11 @@ env:
     - OBS_USER=metaxy
 before_install:
   - . travis/set-variables.sh
-  - if [ $TRAVIS_OS_NAME == osx ]; then . travis/before-install-osx.sh ; fi
   - if [ $TRAVIS_OS_NAME == linux ]; then  . travis/before-install-linux.sh; fi
+  - if [ $TRAVIS_OS_NAME == osx ]; then . travis/before-install-osx.sh ; fi
+ 
 before_script:
-  - if [ $TRAVIS_OS_NAME == linux ]; then qmake . ; fi
+  - if [ $TRAVIS_OS_NAME == linux ]; then /opt/qt55/bin/qmake . ; fi
   - if [ $TRAVIS_OS_NAME == osx ]; then  qmake . ; fi
   - 
 script:
