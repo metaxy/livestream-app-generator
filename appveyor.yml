@@ -25,7 +25,8 @@ before_build:
   
 build_script:
 - qmake
-- nmake
+- dir
+- msbuild
 
 deploy:
 - provider: BinTray
