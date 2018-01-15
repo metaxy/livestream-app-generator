@@ -1,0 +1,75 @@
+version: 0.9.{build}
+# branches to build
+branches:
+  # whitelist
+  only:
+    - master
+environment:
+  qt_ver: C:\\Qt\\5.5\\msvc2013_64
+  cmake_generator: Visual Studio 12 2013 Win64
+  BOOST_BUILD_PATH: C:\Libraries\boost\tools\build\v2
+  BOOST_PATH: C:\Libraries\boost
+  BOOST_ROOT: C:\Libraries\boost
+  clucene_source: c:\\projects\\clucene
+  zlib: C:\\zlib-install
+  clucene_install: C:\\clucene-install
+
+
+# Operating system (build VM template)
+os: Visual Studio 2013
+
+# scripts that are called at very beginning, before repo cloning
+init:
+  - git config --global core.autocrlf input
+
+# clone directory
+clone_folder: c:\projects\openBibleViewer
+configuration: Release
+install:
+  # install pkg config
+  - ps: (new-object net.webclient).DownloadFile('http://nirbheek.in/files/binaries/pkg-config/win32/pkg-config.exe', 'C:\projects\openBibleViewer\pkg-config.exe')
+  # build clucenea
+  - mkdir "%clucene_install%"
+  - cd c:\projects
+  - git clone git://clucene.git.sourceforge.net/gitroot/clucene/clucene clucene
+  - cd "%clucene_source%"
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_BUILD_TYPE="Release" -G "%cmake_generator%" -DCMAKE_INSTALL_PREFIX="%clucene_install%" ..
+  - cmake --build . --config Release --target install
+  # install zlib
+  - cmd: mkdir c:\zlib
+  - appveyor DownloadFile "https://github.com/madler/zlib/archive/v1.2.9.zip" -FileName zlib.zip
+  - 7z x zlib.zip -oC:\zlib
+  - cmd: cd C:\zlib
+  - cmd: mkdir "%zlib%"
+  - cmd: mkdir C:\zlib-build
+  - cmd: cd C:\zlib-build
+  - cmake -G"%cmake_generator%" -DCMAKE_INSTALL_PREFIX:PATH="%zlib%" C:\zlib\zlib-1.2.9
+  - msbuild zlib.sln /m
+  - cmd: msbuild INSTALL.vcxproj
+
+# scripts to run before build
+before_build:
+  - echo Running cmake...
+  - cd c:\projects\openBibleViewer
+  
+build_script:
+- cmd: >-
+    cmake -G "%cmake_generator%" -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX=%P% -DCMAKE_PREFIX_PATH="%qt_ver%\lib\cmake\Qt5Core;%qt_ver%\lib\cmake\Qt5Gui;%qt_ver%\lib\cmake\Qt5Xml;%qt_ver%\lib\cmake\Qt5Network;%qt_ver%\lib\cmake\Qt5Sql;%qt_ver%\lib\cmake\Qt5PrintSupport;%qt_ver%\lib\cmake\Qt5WebKitWidgets;%qt_ver%\lib\cmake\Qt5Script;%qt_ver%\lib\cmake\Qt5Widgets" -DCLUCENE_SOURCE="%clucene_source%" -DCLUCENE_INSTALL="%clucene_install%" -DMQT_BIN_DIR="%qt_ver%\\bin"  -DZLIB_DLL="%zlib%\\bin\\zlib.dll" -DZLIB_INCLUDE_DIR="%zlib%\\include" -DZLIB_LIBRARY="%zlib%\\lib\\zlib.lib"
+- cmake --build . --config Release
+- cpack -C Release
+
+deploy:
+- provider: BinTray
+  username: metaxy
+  api_key:
+    secure: Zp4u4mhL00MlOdQAnVFvg6UsAtLv+h/5VjeJdsedrVp9TpqavUzt91aGo0LL+tvz
+  subject: johnsmith
+  repo: openBibleViewer
+  package: Windows
+  version: ${version}
+  publish: true
+  override: true
+  explode: true
+  artifact: /.*\.exe/
