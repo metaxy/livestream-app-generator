@@ -6,7 +6,7 @@ branches:
     - master
 
 # Operating system (build VM template)
-os: Visual Studio 2013
+os: Visual Studio 2015
 
 # scripts that are called at very beginning, before repo cloning
 init:
@@ -17,8 +17,10 @@ clone_folder: c:\projects\livestream-app-generator
 configuration: Release
 
 install:
-  - set QTDIR=C:\Qt\5.5\msvc2013_64
+  - set QTDIR=C:\Qt\5.6\msvc2015_64
   - set PATH=%PATH%;%QTDIR%\bin
+  - "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64
+  - "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64
 # scripts to run before build
 before_build:
   - cd c:\projects\livestream-app-generator
