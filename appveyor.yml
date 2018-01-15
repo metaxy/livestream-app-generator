@@ -21,7 +21,7 @@ configuration: Release
 
 # scripts to run before build
 before_build:
-  - cd c:\projects\openBibleViewer
+  - cd c:\projects\ivestream-app-generator
   
 build_script:
 - qmake
