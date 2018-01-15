@@ -8,6 +8,8 @@ environment:
   qt_ver: C:\Qt\5.9.2\winrt_x64_msvc2017
 
 
+
+
 # Operating system (build VM template)
 os: Visual Studio 2017
 
@@ -19,6 +21,9 @@ init:
 clone_folder: c:\projects\livestream-app-generator
 configuration: Release
 
+install:
+  - set QTDIR=C:\Qt\5.9.2\msvc2017_64
+  - set PATH=%PATH%;%QTDIR%\bin
 # scripts to run before build
 before_build:
   - cd c:\projects\livestream-app-generator
