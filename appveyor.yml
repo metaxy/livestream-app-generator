@@ -21,7 +21,7 @@ configuration: Release
 
 # scripts to run before build
 before_build:
-  - cd c:\projects\ivestream-app-generator
+  - cd c:\projects\livestream-app-generator
   
 build_script:
 - qmake
