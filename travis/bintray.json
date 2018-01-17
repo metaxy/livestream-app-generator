@@ -1,0 +1,19 @@
+{
+  "package": {
+    "name": "osx", 
+    "repo": "livestream-app-generator",
+    "subject": "metaxy"
+  },
+  "version": {
+    "name": "0.0",
+    "desc": "ECG APP 0.9",
+    "released": "2017-11-21",
+    "vcs_tag": "0.9",
+    "attributes": [],
+    "gpgSign": false
+  },
+  "files": [
+    {"includePattern": "build_results/(.*)", "uploadPattern": "bin/$1"}
+  ],
+  "publish": true
+} 
