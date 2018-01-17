@@ -38,16 +38,16 @@ before_install:
         export JOBS=$((`sysctl -n hw.ncpu`+1));
     fi
 
-  - if [ $TRAVIS_OS_NAME == linux ]; then  . travis/before-install-linux.sh; fi
+  - if [ $SPEC == "linux-g++-64" ]; then  . travis/before-install-linux.sh; fi
   - if [ $TRAVIS_OS_NAME == osx ]; then . travis/before-install-osx.sh ; fi
-  - if [ $TRAVIS_OS_NAME == andriod ]; then . travis/before-install-andriod.sh ; fi
+  - if [ $SPEC == "android-g++" ]; then . travis/before-install-andriod.sh ; fi
 before_script:
-  - if [ $TRAVIS_OS_NAME == linux ]; then /opt/qt55/bin/qmake . ; fi
+  - if [ $SPEC == "linux-g++-64" ]; then /opt/qt55/bin/qmake . ; fi
   - if [ $TRAVIS_OS_NAME == osx ]; then  qmake . ; fi
   
 script:
-  - if [ $TRAVIS_OS_NAME == linux ]; then make VERBOSE=1 ; fi
-  - if [ $TRAVIS_OS_NAME == andriod ]; then . travis/script-andriod.sh ; fi
+  - if [ $SPEC == "linux-g++-64" ]; then make VERBOSE=1 ; fi
+  - if [ $SPEC == "android-g++" ]; then . travis/script-andriod.sh ; fi
   
 deploy:
   provider: bintray
