@@ -17,3 +17,16 @@ Download the NDK from https://developer.android.com/ndk/downloads/index.html
 ```bash
 
 sudo apt-get install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+
+
+# Your own package
+
+## BinTray
+ + Create an bintray account
+ + Create an repo on bintray
+ + create packages for
+  + linux
+  + macos
+  + android
+  + ios
+  
