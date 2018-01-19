@@ -28,9 +28,6 @@ matrix:
           sudo: false
           before_install: . travis/android-install.sh
           script: . travis/android-script.sh
-          android:
-            - build-tools-25.0.3
-            - android-25
           deploy:
             provider: bintray
             file: "bintray/android.json"
