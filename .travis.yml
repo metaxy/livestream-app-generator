@@ -14,6 +14,14 @@ matrix:
           sudo: required
           before_install: . travis/linux-install.sh
           script:  . travis/linux-script.sh
+          deploy:
+            provider: bintray
+            file: "bintray/linux.json"
+            user: "metaxy"
+            on:
+                branch: master
+            key:
+                secure: PmBDMb8GJy1GhZ9QCM1p2Qx9A0W0hBvVJSrGFfyz+btngOwbrpNhj/l233HihLY5SmAM6h7yWCwt+jMhKJezr+kxTQSxhR+piM+ZJOeD7LcKeniHGsANHSvsIDY9rNM8gk4sBcUl6jxWEYxgqpuxF5UVIrVKa6IZGE/YkMJ8KqyLSMzKXRsmLoUmYK+KzhsAT2FIb1OZLcazGZ0tuI1PyoXqQL/nhxskRudMSflFzVWPhae03rg0J91GRVxTKeiMwPxfw+atdVpF7P7RxOXieyhZCqb3gkyO1/v7PU4G9LKEtrncdRyVhF8yE28JmjjpVeq7NgM0pvP1iJtI/jbwm6eFF5HnB+77JZfNn5gW580icvllnjQdeUBQ4T+iM1xWA8Cy/0uCPiAhuFesAkfNWH1YaLMQHISUrikeKIjeOUwd6Ld6+Pp5hWLlKrdF1xRLw+EWj7x3Zj25rZ7Vr/IhFo+cBmqqlNYZWxV09BZo1XpYQdB1XufmxJ/AAxetF7/vGKymE1k8+yLcAUcHLWht/Jc8KVhrGMpPWX1vP0ydHofLAA/lSKgADmmOj5I952gMl3/eeXgioXMSiJpIzQlzFnz+JbzsDqkhVYEfCJCybIU9/nyvR7J10H2dxp6f6e5dhjvOnKrFJ9iSIoJVIY0qdJpIv6Z4HlTRmUQpItfSYEw=
         - os: android
           language: android
           env: SPEC=android-g++ CONFIG=installer
@@ -37,11 +45,27 @@ matrix:
           sudo: required
           before_install: . travis/macos-install.sh
           script: . travis/macos-script.sh
+          deploy:
+            provider: bintray
+            file: "bintray/macos.json"
+            user: "metaxy"
+            on:
+                branch: master
+            key:
+                secure: PmBDMb8GJy1GhZ9QCM1p2Qx9A0W0hBvVJSrGFfyz+btngOwbrpNhj/l233HihLY5SmAM6h7yWCwt+jMhKJezr+kxTQSxhR+piM+ZJOeD7LcKeniHGsANHSvsIDY9rNM8gk4sBcUl6jxWEYxgqpuxF5UVIrVKa6IZGE/YkMJ8KqyLSMzKXRsmLoUmYK+KzhsAT2FIb1OZLcazGZ0tuI1PyoXqQL/nhxskRudMSflFzVWPhae03rg0J91GRVxTKeiMwPxfw+atdVpF7P7RxOXieyhZCqb3gkyO1/v7PU4G9LKEtrncdRyVhF8yE28JmjjpVeq7NgM0pvP1iJtI/jbwm6eFF5HnB+77JZfNn5gW580icvllnjQdeUBQ4T+iM1xWA8Cy/0uCPiAhuFesAkfNWH1YaLMQHISUrikeKIjeOUwd6Ld6+Pp5hWLlKrdF1xRLw+EWj7x3Zj25rZ7Vr/IhFo+cBmqqlNYZWxV09BZo1XpYQdB1XufmxJ/AAxetF7/vGKymE1k8+yLcAUcHLWht/Jc8KVhrGMpPWX1vP0ydHofLAA/lSKgADmmOj5I952gMl3/eeXgioXMSiJpIzQlzFnz+JbzsDqkhVYEfCJCybIU9/nyvR7J10H2dxp6f6e5dhjvOnKrFJ9iSIoJVIY0qdJpIv6Z4HlTRmUQpItfSYEw=
         - os: osx
           osx_image: xcode9.2
           env: SPEC=macx-ios-clang CONFIG=release
           sudo: false
           before_install: . travis/ios-install.sh
           script: . travis/ios-script.sh
+          deploy:
+            provider: bintray
+            file: "bintray/ios.json"
+            user: "metaxy"
+            on:
+                branch: master
+            key:
+                secure: PmBDMb8GJy1GhZ9QCM1p2Qx9A0W0hBvVJSrGFfyz+btngOwbrpNhj/l233HihLY5SmAM6h7yWCwt+jMhKJezr+kxTQSxhR+piM+ZJOeD7LcKeniHGsANHSvsIDY9rNM8gk4sBcUl6jxWEYxgqpuxF5UVIrVKa6IZGE/YkMJ8KqyLSMzKXRsmLoUmYK+KzhsAT2FIb1OZLcazGZ0tuI1PyoXqQL/nhxskRudMSflFzVWPhae03rg0J91GRVxTKeiMwPxfw+atdVpF7P7RxOXieyhZCqb3gkyO1/v7PU4G9LKEtrncdRyVhF8yE28JmjjpVeq7NgM0pvP1iJtI/jbwm6eFF5HnB+77JZfNn5gW580icvllnjQdeUBQ4T+iM1xWA8Cy/0uCPiAhuFesAkfNWH1YaLMQHISUrikeKIjeOUwd6Ld6+Pp5hWLlKrdF1xRLw+EWj7x3Zj25rZ7Vr/IhFo+cBmqqlNYZWxV09BZo1XpYQdB1XufmxJ/AAxetF7/vGKymE1k8+yLcAUcHLWht/Jc8KVhrGMpPWX1vP0ydHofLAA/lSKgADmmOj5I952gMl3/eeXgioXMSiJpIzQlzFnz+JbzsDqkhVYEfCJCybIU9/nyvR7J10H2dxp6f6e5dhjvOnKrFJ9iSIoJVIY0qdJpIv6Z4HlTRmUQpItfSYEw=
 
 
