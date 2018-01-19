@@ -9,3 +9,4 @@ source qtci/path.env
 qt-5.5.1-android-19
 cat qt-5.5.1-android-19.env
 ls $QT_ROOT
+ 
