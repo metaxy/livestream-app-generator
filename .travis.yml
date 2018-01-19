@@ -21,7 +21,7 @@ matrix:
             on:
                 branch: master
             key:
-                secure: PmBDMb8GJy1GhZ9QCM1p2Qx9A0W0hBvVJSrGFfyz+btngOwbrpNhj/l233HihLY5SmAM6h7yWCwt+jMhKJezr+kxTQSxhR+piM+ZJOeD7LcKeniHGsANHSvsIDY9rNM8gk4sBcUl6jxWEYxgqpuxF5UVIrVKa6IZGE/YkMJ8KqyLSMzKXRsmLoUmYK+KzhsAT2FIb1OZLcazGZ0tuI1PyoXqQL/nhxskRudMSflFzVWPhae03rg0J91GRVxTKeiMwPxfw+atdVpF7P7RxOXieyhZCqb3gkyO1/v7PU4G9LKEtrncdRyVhF8yE28JmjjpVeq7NgM0pvP1iJtI/jbwm6eFF5HnB+77JZfNn5gW580icvllnjQdeUBQ4T+iM1xWA8Cy/0uCPiAhuFesAkfNWH1YaLMQHISUrikeKIjeOUwd6Ld6+Pp5hWLlKrdF1xRLw+EWj7x3Zj25rZ7Vr/IhFo+cBmqqlNYZWxV09BZo1XpYQdB1XufmxJ/AAxetF7/vGKymE1k8+yLcAUcHLWht/Jc8KVhrGMpPWX1vP0ydHofLAA/lSKgADmmOj5I952gMl3/eeXgioXMSiJpIzQlzFnz+JbzsDqkhVYEfCJCybIU9/nyvR7J10H2dxp6f6e5dhjvOnKrFJ9iSIoJVIY0qdJpIv6Z4HlTRmUQpItfSYEw=
+                secure: "oavrVI8xdXD1h0xmDMNfQjSlN270glnmQ4gXvN9JocxSkg4KpUPX6fe90xKo+zKVLWtJhncdIzxmSq5VQ1aV/SdJEjasrel6QfvMn3xJVgTh3fQkIgu29QXii0CV9l30TMsrIhjYDkrbGnesulXG/D+QvLdB1xnD/zcsOvZxv3NA/q8gzb8rwPoMrOeWtnzlFUVgm2OKAtYTmyS7GlEnaztXQEsN3l4hViurTV9pFrpS28Ly1IYnOgqahMDHE1YqjRoK+/8+TbmrBQyacZWAXCsD8nnUWKQ364BdGUYZvF653L4a0SRUr1Y5vy0rQktjguhV1duyvcGV42KADAA6lR7C4EaeLDOydA1cuTQaKpmokFIJ6+1L6TtzIqBOjcaNzDGJsvpc8yoaxl0cqx5AKyhRKMvBeuw4nr9y0py4QjBqXmdion547VSD4/coJtMDhtdC8GetO7GkuMwWn2xOwHLdw6X205R+C9D9ePl4gl2CNa7OJUNYZoW7jMhfut08F/rcdeNSW3mNN9Zb2NACZ9+O6vHhzXc92Y0cYNTN32wizbI/+xpLY88aAM4kTpUEVhHzPkDHtCJzTeHTG3BfZuKVedVZjM/sdF9W3zDgkOjtfoyW8+bMJNJ9AKSLQWOWRq/rnVpylPrF9ITForg72W2u0Mh9Gd6/MuvgAlMPJ2k="
         - os: android
           language: android
           env: SPEC=android-g++ CONFIG=installer
@@ -35,7 +35,7 @@ matrix:
             on:
                 branch: master
             key:
-                secure: PmBDMb8GJy1GhZ9QCM1p2Qx9A0W0hBvVJSrGFfyz+btngOwbrpNhj/l233HihLY5SmAM6h7yWCwt+jMhKJezr+kxTQSxhR+piM+ZJOeD7LcKeniHGsANHSvsIDY9rNM8gk4sBcUl6jxWEYxgqpuxF5UVIrVKa6IZGE/YkMJ8KqyLSMzKXRsmLoUmYK+KzhsAT2FIb1OZLcazGZ0tuI1PyoXqQL/nhxskRudMSflFzVWPhae03rg0J91GRVxTKeiMwPxfw+atdVpF7P7RxOXieyhZCqb3gkyO1/v7PU4G9LKEtrncdRyVhF8yE28JmjjpVeq7NgM0pvP1iJtI/jbwm6eFF5HnB+77JZfNn5gW580icvllnjQdeUBQ4T+iM1xWA8Cy/0uCPiAhuFesAkfNWH1YaLMQHISUrikeKIjeOUwd6Ld6+Pp5hWLlKrdF1xRLw+EWj7x3Zj25rZ7Vr/IhFo+cBmqqlNYZWxV09BZo1XpYQdB1XufmxJ/AAxetF7/vGKymE1k8+yLcAUcHLWht/Jc8KVhrGMpPWX1vP0ydHofLAA/lSKgADmmOj5I952gMl3/eeXgioXMSiJpIzQlzFnz+JbzsDqkhVYEfCJCybIU9/nyvR7J10H2dxp6f6e5dhjvOnKrFJ9iSIoJVIY0qdJpIv6Z4HlTRmUQpItfSYEw=
+                secure: "oavrVI8xdXD1h0xmDMNfQjSlN270glnmQ4gXvN9JocxSkg4KpUPX6fe90xKo+zKVLWtJhncdIzxmSq5VQ1aV/SdJEjasrel6QfvMn3xJVgTh3fQkIgu29QXii0CV9l30TMsrIhjYDkrbGnesulXG/D+QvLdB1xnD/zcsOvZxv3NA/q8gzb8rwPoMrOeWtnzlFUVgm2OKAtYTmyS7GlEnaztXQEsN3l4hViurTV9pFrpS28Ly1IYnOgqahMDHE1YqjRoK+/8+TbmrBQyacZWAXCsD8nnUWKQ364BdGUYZvF653L4a0SRUr1Y5vy0rQktjguhV1duyvcGV42KADAA6lR7C4EaeLDOydA1cuTQaKpmokFIJ6+1L6TtzIqBOjcaNzDGJsvpc8yoaxl0cqx5AKyhRKMvBeuw4nr9y0py4QjBqXmdion547VSD4/coJtMDhtdC8GetO7GkuMwWn2xOwHLdw6X205R+C9D9ePl4gl2CNa7OJUNYZoW7jMhfut08F/rcdeNSW3mNN9Zb2NACZ9+O6vHhzXc92Y0cYNTN32wizbI/+xpLY88aAM4kTpUEVhHzPkDHtCJzTeHTG3BfZuKVedVZjM/sdF9W3zDgkOjtfoyW8+bMJNJ9AKSLQWOWRq/rnVpylPrF9ITForg72W2u0Mh9Gd6/MuvgAlMPJ2k="
         - os: osx
           osx_image: xcode9.2
           env: SPEC=macx-clang CONFIG=installer
@@ -49,7 +49,7 @@ matrix:
             on:
                 branch: master
             key:
-                secure: PmBDMb8GJy1GhZ9QCM1p2Qx9A0W0hBvVJSrGFfyz+btngOwbrpNhj/l233HihLY5SmAM6h7yWCwt+jMhKJezr+kxTQSxhR+piM+ZJOeD7LcKeniHGsANHSvsIDY9rNM8gk4sBcUl6jxWEYxgqpuxF5UVIrVKa6IZGE/YkMJ8KqyLSMzKXRsmLoUmYK+KzhsAT2FIb1OZLcazGZ0tuI1PyoXqQL/nhxskRudMSflFzVWPhae03rg0J91GRVxTKeiMwPxfw+atdVpF7P7RxOXieyhZCqb3gkyO1/v7PU4G9LKEtrncdRyVhF8yE28JmjjpVeq7NgM0pvP1iJtI/jbwm6eFF5HnB+77JZfNn5gW580icvllnjQdeUBQ4T+iM1xWA8Cy/0uCPiAhuFesAkfNWH1YaLMQHISUrikeKIjeOUwd6Ld6+Pp5hWLlKrdF1xRLw+EWj7x3Zj25rZ7Vr/IhFo+cBmqqlNYZWxV09BZo1XpYQdB1XufmxJ/AAxetF7/vGKymE1k8+yLcAUcHLWht/Jc8KVhrGMpPWX1vP0ydHofLAA/lSKgADmmOj5I952gMl3/eeXgioXMSiJpIzQlzFnz+JbzsDqkhVYEfCJCybIU9/nyvR7J10H2dxp6f6e5dhjvOnKrFJ9iSIoJVIY0qdJpIv6Z4HlTRmUQpItfSYEw=
+                secure: "oavrVI8xdXD1h0xmDMNfQjSlN270glnmQ4gXvN9JocxSkg4KpUPX6fe90xKo+zKVLWtJhncdIzxmSq5VQ1aV/SdJEjasrel6QfvMn3xJVgTh3fQkIgu29QXii0CV9l30TMsrIhjYDkrbGnesulXG/D+QvLdB1xnD/zcsOvZxv3NA/q8gzb8rwPoMrOeWtnzlFUVgm2OKAtYTmyS7GlEnaztXQEsN3l4hViurTV9pFrpS28Ly1IYnOgqahMDHE1YqjRoK+/8+TbmrBQyacZWAXCsD8nnUWKQ364BdGUYZvF653L4a0SRUr1Y5vy0rQktjguhV1duyvcGV42KADAA6lR7C4EaeLDOydA1cuTQaKpmokFIJ6+1L6TtzIqBOjcaNzDGJsvpc8yoaxl0cqx5AKyhRKMvBeuw4nr9y0py4QjBqXmdion547VSD4/coJtMDhtdC8GetO7GkuMwWn2xOwHLdw6X205R+C9D9ePl4gl2CNa7OJUNYZoW7jMhfut08F/rcdeNSW3mNN9Zb2NACZ9+O6vHhzXc92Y0cYNTN32wizbI/+xpLY88aAM4kTpUEVhHzPkDHtCJzTeHTG3BfZuKVedVZjM/sdF9W3zDgkOjtfoyW8+bMJNJ9AKSLQWOWRq/rnVpylPrF9ITForg72W2u0Mh9Gd6/MuvgAlMPJ2k="
         - os: osx
           osx_image: xcode9.2
           env: SPEC=macx-ios-clang CONFIG=release
@@ -63,6 +63,6 @@ matrix:
             on:
                 branch: master
             key:
-                secure: PmBDMb8GJy1GhZ9QCM1p2Qx9A0W0hBvVJSrGFfyz+btngOwbrpNhj/l233HihLY5SmAM6h7yWCwt+jMhKJezr+kxTQSxhR+piM+ZJOeD7LcKeniHGsANHSvsIDY9rNM8gk4sBcUl6jxWEYxgqpuxF5UVIrVKa6IZGE/YkMJ8KqyLSMzKXRsmLoUmYK+KzhsAT2FIb1OZLcazGZ0tuI1PyoXqQL/nhxskRudMSflFzVWPhae03rg0J91GRVxTKeiMwPxfw+atdVpF7P7RxOXieyhZCqb3gkyO1/v7PU4G9LKEtrncdRyVhF8yE28JmjjpVeq7NgM0pvP1iJtI/jbwm6eFF5HnB+77JZfNn5gW580icvllnjQdeUBQ4T+iM1xWA8Cy/0uCPiAhuFesAkfNWH1YaLMQHISUrikeKIjeOUwd6Ld6+Pp5hWLlKrdF1xRLw+EWj7x3Zj25rZ7Vr/IhFo+cBmqqlNYZWxV09BZo1XpYQdB1XufmxJ/AAxetF7/vGKymE1k8+yLcAUcHLWht/Jc8KVhrGMpPWX1vP0ydHofLAA/lSKgADmmOj5I952gMl3/eeXgioXMSiJpIzQlzFnz+JbzsDqkhVYEfCJCybIU9/nyvR7J10H2dxp6f6e5dhjvOnKrFJ9iSIoJVIY0qdJpIv6Z4HlTRmUQpItfSYEw=
+                secure: "oavrVI8xdXD1h0xmDMNfQjSlN270glnmQ4gXvN9JocxSkg4KpUPX6fe90xKo+zKVLWtJhncdIzxmSq5VQ1aV/SdJEjasrel6QfvMn3xJVgTh3fQkIgu29QXii0CV9l30TMsrIhjYDkrbGnesulXG/D+QvLdB1xnD/zcsOvZxv3NA/q8gzb8rwPoMrOeWtnzlFUVgm2OKAtYTmyS7GlEnaztXQEsN3l4hViurTV9pFrpS28Ly1IYnOgqahMDHE1YqjRoK+/8+TbmrBQyacZWAXCsD8nnUWKQ364BdGUYZvF653L4a0SRUr1Y5vy0rQktjguhV1duyvcGV42KADAA6lR7C4EaeLDOydA1cuTQaKpmokFIJ6+1L6TtzIqBOjcaNzDGJsvpc8yoaxl0cqx5AKyhRKMvBeuw4nr9y0py4QjBqXmdion547VSD4/coJtMDhtdC8GetO7GkuMwWn2xOwHLdw6X205R+C9D9ePl4gl2CNa7OJUNYZoW7jMhfut08F/rcdeNSW3mNN9Zb2NACZ9+O6vHhzXc92Y0cYNTN32wizbI/+xpLY88aAM4kTpUEVhHzPkDHtCJzTeHTG3BfZuKVedVZjM/sdF9W3zDgkOjtfoyW8+bMJNJ9AKSLQWOWRq/rnVpylPrF9ITForg72W2u0Mh9Gd6/MuvgAlMPJ2k="
 
 
