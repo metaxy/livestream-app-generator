@@ -12,26 +12,26 @@ matrix:
           dist: trusty
           env: SPEC=linux-g++-64 CONFIG=installer
           sudo: required
-          before_install:  travis/linux-install.sh
-          script:  travis/linux-script.sh
+          before_install: . travis/linux-install.sh
+          script:  . travis/linux-script.sh
         - os: android
           language: android
           env: SPEC=android-g++ CONFIG=installer
           sudo: false
-          before_install:  travis/android-install.sh
-          script:  travis/android-script.sh
+          before_install: . travis/android-install.sh
+          script: . travis/android-script.sh
         - os: osx
           osx_image: xcode9.2
           env: SPEC=macx-clang CONFIG=installer
           sudo: required
-          before_install:  travis/macos-install.sh
-          script:  travis/macos-script.sh
+          before_install: . travis/macos-install.sh
+          script: . travis/macos-script.sh
         - os: osx
           osx_image: xcode9.2
           env: SPEC=macx-ios-clang CONFIG=release
           sudo: false
-          before_install:  travis/ios-install.sh
-          script:  travis/ios-script.sh
+          before_install: . travis/ios-install.sh
+          script: . travis/ios-script.sh
 
 deploy:
   provider: bintray
